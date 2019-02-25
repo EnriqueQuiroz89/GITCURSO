@@ -9,13 +9,6 @@ $ide=$_GET['id'];
 
 echo 'No se pueden mostrar los datos desde la consulta: $query !!'.$ide;
           
-$query= "SELECT   a.CLAVE_ARTICULO AS clave, a.ARTICULO_ID As articulo_id, a.ROL_CLAVE_ART_ID as rol FROM CLAVES_ARTICULOS a WHERE a.CLAVE_ARTICULO_ID=$ide";
-	/*	$query= "SELECT A.ALUMNOS_ID, A.ALUMNOS_NOMBRE, B.SEXO_ID FROM ALUMNOS A INNER JOIN SEXO B ON A.ALUMNOS_SEXO_ID=B.SEXO_ID WHERE ALUMNOS_ID=$id";*/
-		$res=ibase_query($con, $query);
-		if(!res)
-		{echo 'No se pueden mostrar los datos desde la consulta: $query !!';
-		exit;}
-		$row=ibase_fetch_object($res);
 
 
 if (isset($_POST["btn1"]))
